@@ -16,21 +16,21 @@ public class Main {
         System.out.println("Benvenuto");
         boolean repeat;
         Scanner scanner = new Scanner(System.in);
-        ArrayList<String> listaDesideri = new ArrayList<String>();
-        ArrayList<String> creatori = new ArrayList<String>();
+        ArrayList<String> listaDesideri = new ArrayList<>();
+        ArrayList<String> creatori = new ArrayList<>();
 
         do {
             System.out.println("Inserisci desiderio :");
-//            String desiderio=scanner.nextLine();
             listaDesideri.add(scanner.nextLine());
             System.out.println("Al momento hai "+listaDesideri.size()+" desideri.");
 
 
             System.out.println("Per aggiungere un desiderio premi 's' oppure 'n' per uscire");
             String option = scanner.nextLine();
-            repeat = (option.equals("s")) ? true : false;
+            repeat = option.equals("s");
 
-        }while (repeat);
+        }while (repeat || listaDesideri.size()<=10);
+
         Collections.sort(listaDesideri);
         System.out.println("Ecco la tua lista di desideri: "+listaDesideri);
         System.out.println("Grazie.");
