@@ -22,17 +22,17 @@ public class Main {
         do {
             System.out.println("Inserisci desiderio :");
             listaDesideri.add(scanner.nextLine());
-            System.out.println("Al momento hai "+listaDesideri.size()+" desideri.");
+            System.out.println("Al momento hai " + listaDesideri.size() + " desideri.");
 
 
             String option;
-            boolean sOn=true;
+            boolean sOn = true;
 
             do {
                 System.out.println("Per aggiungere un desiderio premi 's' oppure 'n' per uscire");
                 option = scanner.nextLine();
                 if (option.equals("s") || option.equals("n")) {
-                    sOn=false;
+                    sOn = false;
                 } else
                     System.out.println("Solo s o n sono ammessi.");
 
@@ -42,10 +42,10 @@ public class Main {
             repeat = option.equals("s");
 
 
-        }while (repeat && listaDesideri.size()<=10);
+        } while (repeat && listaDesideri.size() <= 10);
 
         Collections.sort(listaDesideri);
-        System.out.println("Ecco la tua lista di desideri: "+listaDesideri);
+        System.out.println("Ecco la tua lista di desideri: " + listaDesideri);
         System.out.println("Grazie.");
         scanner.close();
 
@@ -55,7 +55,7 @@ public class Main {
         creatori.add("Alessia Biagi");
         creatori.add("Oliviero Pinto");
         Collections.sort(creatori);
-        System.out.println("Ecco gli aiutanti di Babbo Natale: "+creatori);
+        System.out.println("Ecco gli aiutanti di Babbo Natale: " + creatori);
 
     }
 }
