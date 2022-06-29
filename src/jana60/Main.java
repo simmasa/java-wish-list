@@ -25,11 +25,24 @@ public class Main {
             System.out.println("Al momento hai "+listaDesideri.size()+" desideri.");
 
 
-            System.out.println("Per aggiungere un desiderio premi 's' oppure 'n' per uscire");
-            String option = scanner.nextLine();
+            String option;
+            boolean sOn=true;
+
+            do {
+                System.out.println("Per aggiungere un desiderio premi 's' oppure 'n' per uscire");
+                option = scanner.nextLine();
+                if (option.equals("s") || option.equals("n")) {
+                    sOn=false;
+                } else
+                    System.out.println("Solo s o n sono ammessi.");
+
+            } while (sOn);
+
+
             repeat = option.equals("s");
 
-        }while (repeat || listaDesideri.size()<=10);
+
+        }while (repeat && listaDesideri.size()<=10);
 
         Collections.sort(listaDesideri);
         System.out.println("Ecco la tua lista di desideri: "+listaDesideri);
