@@ -55,7 +55,7 @@ public class Main {
         creatori.add("Alessia Biagi");
         creatori.add("Oliviero Pinto");
         Collections.sort(creatori);
-        System.out.println("Ecco gli aiutanti di Babbo Natale: " + creatori);
+        System.out.println("Ecco gli aiutanti di Babbo Natale : " + creatori);
 
     }
 }
